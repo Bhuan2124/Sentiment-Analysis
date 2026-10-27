@@ -1,0 +1,112 @@
+{
+  "selection_metric": "macro_f1",
+  "selection_split": "val",
+  "tfidf_params": {
+    "lowercase": true,
+    "strip_accents": "unicode",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.95,
+    "sublinear_tf": true,
+    "stop_words": null
+  },
+  "vocabulary_size": 68334,
+  "param_grids": {
+    "logreg": {
+      "C": [
+        0.3,
+        1.0,
+        3.0,
+        10.0,
+        30.0,
+        100.0
+      ],
+      "class_weight": [
+        null,
+        "balanced"
+      ]
+    },
+    "naive_bayes": {
+      "alpha": [
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0
+      ],
+      "fit_prior": [
+        true,
+        false
+      ]
+    },
+    "linear_svm": {
+      "C": [
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        3.0
+      ],
+      "class_weight": [
+        null,
+        "balanced"
+      ]
+    }
+  },
+  "best_params": {
+    "logreg": {
+      "C": 30.0,
+      "class_weight": "balanced"
+    },
+    "naive_bayes": {
+      "alpha": 0.1,
+      "fit_prior": false
+    },
+    "linear_svm": {
+      "C": 0.3,
+      "class_weight": "balanced"
+    }
+  },
+  "val_results": {
+    "Naive Bayes": {
+      "accuracy": 0.8274,
+      "macro_f1": 0.6519,
+      "weighted_f1": 0.8324,
+      "f1_negative": 0.5668,
+      "f1_neutral": 0.4602,
+      "f1_positive": 0.9288
+    },
+    "Logistic Regression": {
+      "accuracy": 0.8297,
+      "macro_f1": 0.6398,
+      "weighted_f1": 0.8287,
+      "f1_negative": 0.5698,
+      "f1_neutral": 0.4197,
+      "f1_positive": 0.9301
+    },
+    "Linear SVM": {
+      "accuracy": 0.8351,
+      "macro_f1": 0.6385,
+      "weighted_f1": 0.83,
+      "f1_negative": 0.5722,
+      "f1_neutral": 0.4102,
+      "f1_positive": 0.933
+    },
+    "Majority baseline": {
+      "accuracy": 0.7705,
+      "macro_f1": 0.2901,
+      "weighted_f1": 0.6707,
+      "f1_negative": 0.0,
+      "f1_neutral": 0.0,
+      "f1_positive": 0.8704
+    }
+  },
+  "library_versions": {
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "scikit-learn": "1.8.0"
+  }
+}

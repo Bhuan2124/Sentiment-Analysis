@@ -1,0 +1,5 @@
+model,accuracy,macro_f1,weighted_f1,f1_negative,f1_neutral,f1_positive
+Naive Bayes,0.8274,0.6519,0.8324,0.5668,0.4602,0.9288
+Logistic Regression,0.8297,0.6398,0.8287,0.5698,0.4197,0.9301
+Linear SVM,0.8351,0.6385,0.83,0.5722,0.4102,0.933
+Majority baseline,0.7705,0.2901,0.6707,0.0,0.0,0.8704

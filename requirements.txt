@@ -1,0 +1,22 @@
+# Phase 1-2 (data + classical ML). Google Colab already has these installed.
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+matplotlib>=3.7
+seaborn>=0.13
+joblib>=1.3
+jupyter
+
+# Phase 3 (DistilBERT). Colab already has both.
+# On your own computer with an NVIDIA GPU, install the CUDA build of torch FIRST, e.g.
+#   pip install torch --index-url https://download.pytorch.org/whl/cu126
+# (a plain `pip install torch` on Windows gives a CPU-only build, which is far too slow).
+torch>=2.2
+transformers>=4.40
+
+# Exact versions of the successful local run (Python 3.14, Windows, GTX 1650):
+#   pandas 3.0.2, numpy 2.4.4, scikit-learn 1.8.0, matplotlib 3.11.2, seaborn 0.13.2,
+#   joblib 1.5.3, torch 2.14.1+cu126, transformers 5.21.0, tokenizers 0.23.3
+
+# Phase 5 (web app)
+# streamlit

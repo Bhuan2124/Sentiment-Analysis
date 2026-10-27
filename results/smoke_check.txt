@@ -1,0 +1,48 @@
+Smoke check 2026-10-27 22:30:59 | Python 3.14.3
+
+[1] Project files
+  found   results/dataset_summary.json
+  found   results/classical_val_results.csv
+  found   results/classical_summary.json
+  found   results/classical_tuning_all_settings.csv
+  MISSING results/distilbert_summary.json
+  MISSING results/distilbert_search.csv
+  MISSING results/distilbert_history.csv
+  found   results/distilbert_training_log.txt
+  MISSING results/test_results.json
+  found   data/processed/train.csv
+  found   data/processed/val.csv
+  found   data/processed/test.csv
+  found   models/classical/logreg.joblib
+  found   models/classical/naive_bayes.joblib
+  found   models/classical/linear_svm.joblib
+  MISSING models/distilbert/config.json
+
+[2] Splits: labels and leakage
+  train: 15843 reviews, labels consistent
+  val: 3395 reviews, labels consistent
+  test: 3395 reviews, labels consistent
+  overlap between splits: {'train_and_val': 0, 'train_and_test': 0, 'val_and_test': 0}
+
+[3] Predictions from every saved model
+  Logistic Regression: loaded
+    positive        1.000  Lovely dress, fits perfectly and the fabric is soft. I love 
+    negative        0.983  The fabric feels cheap and it fell apart after one wash. I a
+    positive        0.622  It is okay. Nice colour but it runs small and the material i
+    negative        0.982  Not good at all.
+    invalid input rejected: OK
+  Naive Bayes: loaded
+    positive        0.972  Lovely dress, fits perfectly and the fabric is soft. I love 
+    negative        0.918  The fabric feels cheap and it fell apart after one wash. I a
+    neutral         0.486  It is okay. Nice colour but it runs small and the material i
+    negative        0.670  Not good at all.
+    invalid input rejected: OK
+  Linear SVM: loaded
+    positive  score +1.47  Lovely dress, fits perfectly and the fabric is soft. I love 
+    negative  score +1.15  The fabric feels cheap and it fell apart after one wash. I a
+    positive  score +0.03  It is okay. Nice colour but it runs small and the material i
+    negative  score +0.58  Not good at all.
+    invalid input rejected: OK
+  DistilBERT: not available (The fine-tuned model folder models/distilbert is missing or incomplete. Run notebooks/03_distilbert.ipynb (it saves the model to models/distilbert/). If training is still running, wait for it to finish.)
+
+RESULT: SMOKE CHECK PASSED

@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-28 00:10:13",
+  "split": "test",
+  "n_test": 3395,
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "environment": {
+    "python": "3.14.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "scikit_learn": "1.8.0",
+    "torch": "2.14.1+cpu",
+    "cuda_available": false
+  },
+  "baseline": {
+    "name": "Majority baseline",
+    "predicts": "positive",
+    "accuracy": 0.7705449189985273,
+    "macro_f1": 0.29013475295291963
+  },
+  "models": {
+    "logreg": {
+      "display_name": "Logistic Regression",
+      "family": "classical",
+      "status": "evaluated",
+      "metrics": {
+        "accuracy": 0.809720176730486,
+        "macro_precision": 0.599889745052363,
+        "macro_recall": 0.5953228129572156,
+        "macro_f1": 0.5975485931505744,
+        "weighted_f1": 0.8080938434591454
+      },
+      "weighted": {
+        "precision": 0.8065286937406116,
+        "recall": 0.809720176730486,
+        "f1": 0.8080938434591454
+      },
+      "per_class": {
+        "negative": {
+          "precision": 0.5171428571428571,
+          "recall": 0.5098591549295775,
+          "f1": 0.5134751773049645,
+          "support": 355
+        },
+        "neutral": {
+          "precision": 0.36519607843137253,
+          "recall": 0.35141509433962265,
+          "f1": 0.3581730769230769,
+          "support": 424
+        },
+        "positive": {
+          "precision": 0.9173302995828593,
+          "recall": 0.9246941896024465,
+          "f1": 0.9209975252236817,
+          "support": 2616
+        }
+      },
+      "confusion_matrix": [
+        [
+          181,
+          115,
+          59
+        ],
+        [
+          116,
+          149,
+          159
+        ],
+        [
+          53,
+          144,
+          2419
+        ]
+      ],
+      "settings": {
+        "C": 30.0,
+        "class_weight": "balanced"
+      },
+      "cost": {
+        "train_seconds": 31.267429900002753,
+        "train_note": "Re-fit of the chosen settings on the training split (TF-IDF + classifier), CPU, median of 3 runs.",
+        "inference_ms_per_review": 0.3447797938148592,
+        "inference_device": "cpu",
+        "model_size_mb": 3.282196,
+        "n_parameters": 205005
+      }
+    },
+    "naive_bayes": {
+      "display_name": "Naive Bayes",
+      "family": "classical",
+      "status": "evaluated",
+      "metrics": {
+        "accuracy": 0.819440353460972,
+        "macro_precision": 0.6246730406955513,
+        "macro_recall": 0.628196550294013,
+        "macro_f1": 0.6241279364083574,
+        "weighted_f1": 0.8237404617180653
+      },
+      "weighted": {
+        "precision": 0.8298294870584575,
+        "recall": 0.819440353460972,
+        "f1": 0.8237404617180653
+      },
+      "per_class": {
+        "negative": {
+          "precision": 0.5303514376996805,
+          "recall": 0.4676056338028169,
+          "f1": 0.49700598802395207,
+          "support": 355
+        },
+        "neutral": {
+          "precision": 0.4042145593869732,
+          "recall": 0.49764150943396224,
+          "f1": 0.44608879492600423,
+          "support": 424
+        },
+        "positive": {
+          "precision": 0.939453125,
+          "recall": 0.9193425076452599,
+          "f1": 0.9292890262751159,
+          "support": 2616
+        }
+      },
+      "confusion_matrix": [
+        [
+          166,
+          151,
+          38
+        ],
+        [
+          96,
+          211,
+          117
+        ],
+        [
+          51,
+          160,
+          2405
+        ]
+      ],
+      "settings": {
+        "alpha": 0.1,
+        "fit_prior": false
+      },
+      "cost": {
+        "train_seconds": 8.65611809999973,
+        "train_note": "Re-fit of the chosen settings on the training split (TF-IDF + classifier), CPU, median of 3 runs.",
+        "inference_ms_per_review": 0.3515224153166006,
+        "inference_device": "cpu",
+        "model_size_mb": 4.922121,
+        "n_parameters": 205005
+      }
+    },
+    "linear_svm": {
+      "display_name": "Linear SVM",
+      "family": "classical",
+      "status": "evaluated",
+      "metrics": {
+        "accuracy": 0.8185567010309278,
+        "macro_precision": 0.6096917725055558,
+        "macro_recall": 0.5906293181937005,
+        "macro_f1": 0.5992612908880551,
+        "weighted_f1": 0.8123343882945442
+      },
+      "weighted": {
+        "precision": 0.8070379431827492,
+        "recall": 0.8185567010309278,
+        "f1": 0.8123343882945442
+      },
+      "per_class": {
+        "negative": {
+          "precision": 0.5299401197604791,
+          "recall": 0.49859154929577465,
+          "f1": 0.5137880986937591,
+          "support": 355
+        },
+        "neutral": {
+          "precision": 0.3863013698630137,
+          "recall": 0.33254716981132076,
+          "f1": 0.3574144486692015,
+          "support": 424
+        },
+        "positive": {
+          "precision": 0.912833827893175,
+          "recall": 0.9407492354740061,
+          "f1": 0.9265813253012049,
+          "support": 2616
+        }
+      },
+      "confusion_matrix": [
+        [
+          177,
+          113,
+          65
+        ],
+        [
+          113,
+          141,
+          170
+        ],
+        [
+          44,
+          111,
+          2461
+        ]
+      ],
+      "settings": {
+        "C": 0.3,
+        "class_weight": "balanced"
+      },
+      "cost": {
+        "train_seconds": 9.032197099997575,
+        "train_note": "Re-fit of the chosen settings on the training split (TF-IDF + classifier), CPU, median of 3 runs.",
+        "inference_ms_per_review": 0.26975873343083134,
+        "inference_device": "cpu",
+        "model_size_mb": 3.282064,
+        "n_parameters": 205005
+      }
+    },
+    "distilbert": {
+      "display_name": "DistilBERT",
+      "family": "transformer",
+      "status": "evaluated",
+      "metrics": {
+        "accuracy": 0.8282768777614139,
+        "macro_precision": 0.658455834190452,
+        "macro_recall": 0.6885591112888165,
+        "macro_f1": 0.6691181259226281,
+        "weighted_f1": 0.8393401520916332
+      },
+      "weighted": {
+        "precision": 0.8548898724240704,
+        "recall": 0.8282768777614139,
+        "f1": 0.8393401520916332
+      },
+      "per_class": {
+        "negative": {
+          "precision": 0.6147308781869688,
+          "recall": 0.6112676056338028,
+          "f1": 0.6129943502824858,
+          "support": 355
+        },
+        "neutral": {
+          "precision": 0.3993174061433447,
+          "recall": 0.5518867924528302,
+          "f1": 0.4633663366336634,
+          "support": 424
+        },
+        "positive": {
+          "precision": 0.9613192182410424,
+          "recall": 0.9025229357798165,
+          "f1": 0.930993690851735,
+          "support": 2616
+        }
+      },
+      "confusion_matrix": [
+        [
+          217,
+          120,
+          18
+        ],
+        [
+          113,
+          234,
+          77
+        ],
+        [
+          23,
+          232,
+          2361
+        ]
+      ],
+      "settings": {
+        "learning_rate": 2e-05,
+        "class_weighted": true
+      },
+      "cost": {
+        "train_seconds": 3618.0,
+        "train_note": "Best run only: 60.3 min on NVIDIA GeForce GTX 1650 (up to 4 epochs, best epoch 4). All runs together: 177.3 min.",
+        "inference_ms_per_review": 242.0389516347564,
+        "inference_device": "cpu",
+        "inference_ms_per_review_cpu": 97.06469700000525,
+        "model_size_mb": 268.548291,
+        "n_parameters": 66955779
+      }
+    }
+  }
+}

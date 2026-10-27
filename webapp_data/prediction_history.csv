@@ -1,0 +1,9 @@
+time,model,prediction,confidence,review
+2026-10-28 00:20:10,Logistic Regression,positive,0.6224,It is okay. Nice colour but it runs small and the material is a bit thin.
+2026-10-28 00:21:21,Logistic Regression,positive,0.6224,It is okay. Nice colour but it runs small and the material is a bit thin.
+2026-10-28 00:36:41,Logistic Regression,positive,0.8757,i loved it
+2026-10-28 00:38:17,Logistic Regression,positive,0.9011,i love this product
+2026-10-28 00:38:55,Logistic Regression,positive,0.9011,i love this product
+2026-10-28 00:51:16,DistilBERT,neutral,0.7001,lovely dress but not worth for 1000rs
+2026-10-28 00:51:52,DistilBERT,neutral,0.7001,lovely dress but not worth for 1000rs
+2026-10-28 00:52:51,DistilBERT,positive,0.9568,i loved this product

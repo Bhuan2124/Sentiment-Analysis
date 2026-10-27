@@ -1,0 +1,47 @@
+{
+  "n_test": 3395,
+  "n_bootstrap": 2000,
+  "seed": 42,
+  "macro_f1": {
+    "logreg": {
+      "point": 0.5975485931505743,
+      "low": 0.5747540657165143,
+      "high": 0.6191077617830719
+    },
+    "naive_bayes": {
+      "point": 0.6241279364083574,
+      "low": 0.6009017562319363,
+      "high": 0.646160784353001
+    },
+    "linear_svm": {
+      "point": 0.5992612908880551,
+      "low": 0.5753324494105511,
+      "high": 0.6216384134950528
+    },
+    "distilbert": {
+      "point": 0.669118125922628,
+      "low": 0.6470402419890049,
+      "high": 0.6905447377310997
+    }
+  },
+  "distilbert_minus": {
+    "logreg": {
+      "point": 0.07156953277205369,
+      "low": 0.04555627397301366,
+      "high": 0.09619646483499265,
+      "share_of_resamples_distilbert_better": 1.0
+    },
+    "naive_bayes": {
+      "point": 0.044990189514270584,
+      "low": 0.019126466124363938,
+      "high": 0.06986880194086759,
+      "share_of_resamples_distilbert_better": 0.999
+    },
+    "linear_svm": {
+      "point": 0.06985683503457285,
+      "low": 0.042928664965302864,
+      "high": 0.09563908163477941,
+      "share_of_resamples_distilbert_better": 1.0
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "model": "distilbert-base-uncased",
+  "selection_metric": "macro_f1",
+  "selection_split": "val",
+  "max_length": 160,
+  "share_truncated_train": 0.0,
+  "train_defaults": {
+    "learning_rate": 3e-05,
+    "class_weighted": false,
+    "epochs": 4,
+    "batch_size": 16,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "patience": 2,
+    "max_length": 160
+  },
+  "search_grid": {
+    "learning_rate": [
+      2e-05,
+      5e-05
+    ],
+    "class_weighted": [
+      false,
+      true
+    ]
+  },
+  "best_settings": {
+    "learning_rate": 2e-05,
+    "class_weighted": true
+  },
+  "best_epoch": 4,
+  "val_metrics": {
+    "accuracy": 0.8279823269513991,
+    "macro_f1": 0.6677089065912707,
+    "weighted_f1": 0.8388454457199083,
+    "f1_negative": 0.6187245590230664,
+    "f1_neutral": 0.4532520325203252,
+    "f1_positive": 0.9311501282304202
+  },
+  "total_training_minutes": 177.3,
+  "device": "NVIDIA GeForce GTX 1650",
+  "library_versions": {
+    "torch": "2.14.1+cu126",
+    "transformers": "5.21.0"
+  }
+}
